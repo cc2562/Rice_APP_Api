@@ -4,7 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta name="viewport" content="initial-scale=1,maximum-scale=1, minimum-scale=1">
-    <title>MASIV 开发文档</title>
+    <title>Rice</title>
     <link rel="shortcut icon" href="../ico.ico" type="image/x-icon">
     <link id="theme" rel="stylesheet" href="./css/masiv.min.css">
     <link rel="stylesheet" href="../css/iconfont/iconfont.css">
@@ -82,7 +82,7 @@
             <li><a class="li opened" node-folder=""><span node-name="">介绍</span><span node-toggler=""><i
                                 class="iconfont icon-down"></i></span></a>
                 <ul>
-                    <li><a class="li opened" href="start.html" target="pages"><span node-name="">起步</span></a></li>
+                    <li><a class="li opened" href="start.html" target="pages"><span node-name="">仪表盘</span></a></li>
                     <li><a class="li opened" href="m.html" target="pages"><span node-name="">M 对象</span></a></li>
                 </ul>
             </li>
@@ -135,7 +135,7 @@
     <div class="n rows">
 
         <header class="header cols">
-            <a href="./home.php" class="logo"><h1>MASIV</h1></a>
+            <a href="./home.php" class="logo"><h1>RICE</h1></a>
             <nav class="navs right">
                 <a class="nav" masiv-sidebar="#masiv-menu"><i class="iconfont icon-menu"></i></a>
                 <a href="../index.html" class="nav iconfont icon-home"></a>
@@ -152,10 +152,10 @@
             $too = $_SESSION['token'];
             $name = $_SESSION['name'];
             echo "<p>111111111111111111$too</p>";
-            if (yantocken($name, $too) == "no") {
+            if (yantocken($name, $too) == "yes") {
                 echo '<iframe id="ifr" src="./index.php" name="pages" class="iframe"></iframe>';
             } else {
-                echo '<iframe id="ifr" src="./111111.php" name="pages" class="iframe"></iframe>';
+                echo '<iframe id="ifr" src="./compass.php" name="pages" class="iframe"></iframe>';
             }
             ?>
 
@@ -177,7 +177,7 @@
                 name: '介绍',
                 open: true,
                 children: [
-                    {name: '起步', href: './reg.php'},
+                    {name: '仪表盘', href: './compass.php'},
                     {name: 'M 对象', href: 'm.html'}
                 ]
             }, {
